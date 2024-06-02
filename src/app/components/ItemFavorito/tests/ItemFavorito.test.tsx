@@ -72,9 +72,9 @@ describe("ItemFavorito", () => {
       </FavoritosProvider>
     );
 
-    expect(screen.getByRole("button", { name: "Remover" })).toBeEnabled();
-
     const botaoRemover = screen.getByRole("button", { name: "Remover" });
+
+    expect(botaoRemover).toBeEnabled();
 
     await userEvent.click(botaoRemover);
 
